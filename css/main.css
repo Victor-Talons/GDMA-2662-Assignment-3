@@ -49,10 +49,22 @@
         box-sizing: border-box;
 }
 html {                  
-        /* color: #00515D;
-        font: 1rem 'Roboto Slab', serif; */
+        color: #000;
+        font: 1.5rem 'EB Garamond', serif;
+        line-height: 1.5rem;
+}
+@media screen and (min-width:768px){
+      
+}
+@media screen and (min-width:1024px){
+        html {
+                font: 1rem 'EB Garamond', serif;
+                line-height: 1rem;
+              }
 }
 
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'EB Garamond', serif; */
 
 
 /*--------------------------------------------------------------
@@ -67,12 +79,21 @@ html {
 
 /* ----- TYPOGRAPHY ----- */ 
 h1 {
-        
+        font: 1em 'Montserrat', sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        padding-bottom: 5em;
 }
 h2 {
-        
+        font: 1em 'Montserrat', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #BCBCBC;
 }
 h3 {
+       
        
 }
 h4 {
@@ -94,11 +115,16 @@ p {
 /* ----- ANCHOR ----- */
 
 a {
-        padding: 5px;
-       
+        font: .8em 'Montserrat', sans-serif;
+        padding: 8px;
         text-decoration: none;
+        color: #BCBCBC;
+        font-weight: 500;
 }
-a:hover { /* -----Move below non hover----- */
+header a {
+        color: #fff;
+}
+a:hover { 
         
         
 }
@@ -261,7 +287,10 @@ a:hover { /* -----Move below non hover----- */
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 /* ----- Grouped ----- */
-
+#Home-bg-hero .row .col-sm-12,
+#about-hero .row .col-sm-12 {
+        text-align: center;
+}
 
 @media screen and (min-width:768px) {
      
@@ -272,11 +301,23 @@ a:hover { /* -----Move below non hover----- */
 
 
 /* ----- NAV ----- */
+main nav {
+        text-align: center;
+}
+
 ul {
         list-style: none;
+        padding-left: 0;
+        margin: 0;
 }
 li { 
-       
+       display: inline-block;
+       margin-bottom: 1em;
+}
+nav li p {
+        font: .8em 'EB Garamond', serif;
+        font-style: italic;
+        color: #4B9475;
 }
 @media screen and (min-width:768px) {
            
@@ -284,7 +325,94 @@ li {
 @media screen and (min-width:1024px) {
            
 }
-/* ----- header-hero ----- */
+/* ----- Home ----- */
+#Home-bg-hero h1 {
+        padding: 0;
+}
+#Home-bg-hero p > a {
+        background-color: #4B9475;
+        border-radius: 20px;
+        
+}
+#Home-bg-hero p:last-child {
+        text-transform: uppercase;
+        
+        padding-bottom: 5em;
+}
+#Home-bg-hero p:last-child a {
+        font-weight: 600;
+}
+#Home-bg-hero p:first-child {
+        color: #fff;
+        font: 2em 'Montserrat', sans-serif;
+        font-weight: 600;
+}
+#Home-bg-hero p:first-child span {
+        
+        font: .8em 'EB Garamond', serif;
+        font-style: italic;
+}
+
+
+
+/* ----- About ----- */
+#what-we-do {
+        font-size: 1.2em;
+        line-height: 1.4em;
+        text-align: center;
+}
+
+/* #about-hero .row nav ul {
+        margin-top: 0;
+} */
+blockquote {
+        text-align: center;
+        line-height: 1.8em;
+        border-top: solid 1px #BCBCBC;
+        border-bottom: solid 1px #BCBCBC;
+        margin-bottom: 3em;
+}
+blockquote footer p {
+        color: #BCBCBC;
+        
+        font: .8em 'Montserrat', sans-serif;
+        font-weight: 600;
+        text-align: left;
+}
+/* ----- Footer ----- */
+#footer {
+        background-color: #1B6E4B;
+        display: inline-block;
+        text-align: center;
+        
+}
+footer > div:first-child {
+        background-color: #4B9475;
+}
+footer a {
+        color: #fff;
+}
+/* ----- hero ----- */
+#about-hero {
+        background: url(../img/about-hero.jpg) no-repeat center;
+        
+        
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+}
+#Home-bg-hero {
+        background: url(../img/home-hero.jpg) no-repeat center;
+        
+        
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+}
 
 @media screen and (min-width:768px) {
 
