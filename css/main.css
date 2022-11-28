@@ -93,13 +93,7 @@ h2 {
         text-transform: uppercase;
         color: #BCBCBC;
 }
-h3 {
-       
-       
-}
-h4 {
-        
-}
+
 main p {
      font-size: .9em;   
 }
@@ -132,10 +126,14 @@ a {
         font-weight: 500;
         
 }
+header li a:hover {
+        border-bottom: 2px solid #fff;
+}
 .btn {
         background-color: #4B9475;
         border-radius: 20px;
         color: #fff;
+        text-transform: uppercase;
 }
 #Home-bg-hero + main a:hover {
         background-color: #1B6E4B;
@@ -330,19 +328,31 @@ ul {
         padding-left: 0;
         margin: 0;
 }
+
 li { 
        display: inline-block;
        margin: .5em;
+       
+}
+li a {
+        text-transform: uppercase;
 }
 nav li p {
         font: .8em 'EB Garamond', serif;
         font-style: italic;
         color: #4B9475;
+        text-transform: capitalize;
 }
-header nav li:last-child  {
+header nav li:last-child a {
         border: solid 1px #fff;
         border-radius: 20px;
 }
+header nav li:last-child a:hover {
+        color: #1B6E4B;
+        background-color: #fff;
+        border-radius: 20px;
+}
+
 header [class*='col-'] {
         padding: 0;
 }
@@ -359,6 +369,13 @@ header [class*='col-'] {
         main nav a {
                 padding: 0;
         }
+        main nav a:hover {
+                color: #1B6E4B;
+        }
+        main ul:last-child {
+                padding-left: 1em;
+        
+        }
 }
 /* ----- Home/Index ----- */
 
@@ -369,12 +386,10 @@ header [class*='col-'] {
 }
 #Home-bg-hero p > a {
         background-color: #4B9475;
-        border-radius: 20px;
-        
+        border-radius: 20px;  
 }
 #Home-bg-hero p:last-child {
         text-transform: uppercase;
-        
         padding-bottom: 5em;
 }
 #Home-bg-hero p:last-child a {
@@ -384,9 +399,10 @@ header [class*='col-'] {
         color: #fff;
         font: 2em 'Montserrat', sans-serif;
         font-weight: 600;      
+        text-transform: uppercase;
 }
 #Home-bg-hero p:first-child span {
-        
+        text-transform: lowercase;
         font: .8em 'EB Garamond', serif;
         font-style: italic;
 }
@@ -395,9 +411,7 @@ header [class*='col-'] {
         line-height: 1.5em;
 }
 
-
 main .intro-p p {
-        /* font-size: 1.5em; */
         line-height: 1.5em;
 }
 .intro-p p {
@@ -420,11 +434,7 @@ main .intro-p p {
         background-size: cover;
         padding: 7em;
 
-        /* -o-background-clip: content-box;
-        -ms-background-clip: content-box;
-        -webkit-background-clip: content-box;
-        -moz-background-clip: content-box;
-        background-clip: content-box; */
+       
 }
 #take-action {
         background: url(../img/take-action-hero.jpg) no-repeat center;
@@ -462,16 +472,22 @@ main .intro-p p {
         }
 }
 /* ----- take-action-bg-hero ----- */
+@media screen and (min-width:768px) {
+      
+
+}
+@media screen and (min-width:1024px) {
+        .wrapper > .col-center {
+                margin: 3em 0em 3em 0em;
+        }
+}
 
 
-
-/* ----- About ----- */
+/* ----- What We Do ----- */
 #what-we-do {
         font-size: 1.2em;
         line-height: 1.4em;
-        /* text-align: center; */
 }
-
 #about-hero ~ main nav p, #what-we-do + main nav li {
         margin: 0;
 }
@@ -481,23 +497,45 @@ main nav {
         top: 0;
         left: 0;
         background-color: #fff;
+        z-index: 2;
+        align-self: flex-start;
+}
+main nav li:first-child {
+        display: block;
+}
+
+blockquote::before {
+        content: '\"';
+        text-align: center;
+        font-size: 7em;
+        position: absolute;
+        top: 0.4em;
+        left: 45%;
+        color: #BCBCBC;       
 }
 blockquote {
-        /* text-align: center; */
+        padding-top: 3em;
         line-height: 1.8em;
         border-top: solid 1px #BCBCBC;
         border-bottom: solid 1px #BCBCBC;
-        margin-bottom: 3em;
+        margin: 3em 0em 3em 0em;
+        text-align: center;
+        position: relative;
+        top: 0;
+        left: 0;
 }
 blockquote footer p {
         color: #BCBCBC;
-        
+        text-align: left;
         font: .8em 'Montserrat', sans-serif;
         font-weight: 600;
         text-align: left;
 }
+
 @media screen and (min-width:768px) {
-       
+       /* blockquote::before {
+        left: 1.6em;
+       } */
 
 }
 @media screen and (min-width:1024px) {
@@ -507,14 +545,25 @@ blockquote footer p {
         main nav li{
                 display: block;
         }
-        blockquote p:first-child {
-                text-align: center;
+        #achievements li {
+                position: relative;
+                top: 0;
+                left: 0;
         }
-        blockquote span {
-                font-size: 12em;
-                color: #BCBCBC;
-                text-align: center;
-                /* display: inline-block; */
+        #achievements li:before {
+                background: url(../img/tree-bullet@2x.jpg) no-repeat;
+                -o-background-size: contain;
+                -ms-background-size: contain;
+                -webkit-background-size: contain;
+                -moz-background-size: contain;
+                background-size: contain;
+                content: "";
+                width: 25px;
+                height: 25px;
+                display: block;
+                position: absolute;
+                left: -20px;
+                top: 0;
         }
 }
 /* ----- Footer ----- */
@@ -537,7 +586,10 @@ footer address {
         padding: 40px 0px 40px 0px;
 }
 footer {
-        margin-top: 60px;
+        margin-top: 5em;
+}
+blockquote footer {
+        margin-top: 2em;
 }
 
 @media screen and (min-width:768px) {
@@ -547,6 +599,7 @@ footer {
         footer address li {
                 display: inline-block;
         }
+        
 }
 /* ----- hero ----- */
 #about-hero {
