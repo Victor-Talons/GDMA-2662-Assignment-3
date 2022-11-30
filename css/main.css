@@ -15,12 +15,13 @@
         -- Grouped
         -- Nav
         -- Hero
-        -- Home
-        -- About
-        -- Take Action
+        -- Snowy-mountain
+        -- Forest
+        -- Blockquote
         -- Footer
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Screen Reader
+        - btn
 --------------------------------------------------------------*/
 
 
@@ -49,8 +50,7 @@
 }
 html {                  
         color: #000;
-        font: 1.5rem 'EB Garamond', serif;
-        line-height: 1.5rem;
+        font: 1.5rem/1.5em 'EB Garamond', serif;
         text-align: center;
 }
 @media screen and (min-width:768px){
@@ -58,8 +58,7 @@ html {
 }
 @media screen and (min-width:1024px){
         html {
-                font: 1.5rem 'EB Garamond', serif;
-                line-height: 1rem;
+                font: 1.5rem/1.5em 'EB Garamond', serif;
         }
 }
 
@@ -67,7 +66,11 @@ html {
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
-
+h1,
+h2,
+li a {
+        text-transform: uppercase;
+}
 
 
 
@@ -77,66 +80,69 @@ html {
 /* ----- TYPOGRAPHY ----- */ 
 h1 {
         font: 2em 'Montserrat', sans-serif;
-        font-weight: 800;
-        text-transform: uppercase;
+        font-weight: 700;
         color: #fff;
-        /* text-align: center; */
         padding-bottom: 3em;
 }
 h2 {
-        font: .9em 'Montserrat', sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
+        font: .7em 'Montserrat', sans-serif;
+        font-weight: 700;
         color: #BCBCBC;
+        letter-spacing: .25em;
+}
+ul { 
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
 }
 
+li { 
+       display: inline-block;
+       margin: .5em;
+       
+}
+
+
 main p {
-     font-size: .9em;   
+     font-size: .9rem;   
 }
 
 @media screen and (min-width:768px){
        
 }
 @media screen and (min-width:1024px){
-        h1 {
-                font-size: 4em;
-                
-        } 
-        main p {
-                font-size: .8em;
-        }
+        main p,
         main ul {
-                font-size: .8em;
+                font-size: .8rem;
+        }
+        h1 {
+                font-size: 4rem;
+                
         }
 }
 
 
 
 /* ----- ANCHOR ----- */
-
+header li a {
+        font-size: .5em;
+        padding: 4px;
+        margin: 0;
+}
 a {
         font: .8em 'Montserrat', sans-serif;
         padding: 8px;
         text-decoration: none;
         color: #BCBCBC;
-        font-weight: 500;
+        font-weight: 600;
         
 }
-header li a:hover {
-        border-bottom: 2px solid #fff;
-}
-.btn {
-        background-color: #4B9475;
-        border-radius: 20px;
-        color: #fff;
-        text-transform: uppercase;
-}
-#Home-bg-hero + main a:hover {
+
+
+main a:hover { 
         background-color: #1B6E4B;
 }
-header a {
-        color: #fff;
-}
+
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -297,6 +303,21 @@ header a {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 /* ----- Grouped ----- */
+#achievements,
+#mission {
+        text-align: left;
+        margin-top: 3em;
+}
+#snowy-mountain-bg p:last-child,
+#snowy-mountain-bg p:first-child {
+        text-transform: uppercase;
+}
+#snowy-mountain-bg p:last-child a,
+#snowy-mountain-bg p:first-child,
+blockquote footer p,
+footer a {
+        font-weight: 600;
+}
 
 
 @media screen and (min-width:768px) {
@@ -305,23 +326,75 @@ header a {
 @media screen and (min-width:1024px) {
      
 }
+/* ----- hero ----- */
+.mountain-bg {
+        background: url(../img/about-hero.jpg) no-repeat center;
+        
+        
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+}
+#snowy-mountain-bg {
+        background: url(../img/home-hero.jpg) no-repeat center;
+        
+        
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+}
+.forest-bg {
+        background: url(../img/take-action-hero.jpg) no-repeat center;
+
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+}
+section > .forest-bg,
+section > .mountain-bg {
+        padding: 7em;
+}
+
+header img {
+        margin-top: 2em;
+}
+@media screen and (min-width:768px) {
+header img {
+        margin-top: 0px;
+}
+}
+@media screen and (min-width:1024px) {
+ 
+}
 
 
 /* ----- NAV ----- */
-
-ul {
-        list-style: none;
-        padding-left: 0;
+main nav { 
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        z-index: 2;
+        align-self: flex-start;
+}
+.mountain-bg ~ main nav p, #what-we-do + main nav li {
         margin: 0;
 }
 
-li { 
-       display: inline-block;
-       margin: .5em;
-       
+main nav li:first-child {
+        display: block;
 }
-li a {
-        text-transform: uppercase;
+header a { 
+        color: #fff;
+}
+header li a:hover { 
+        border-bottom: 2px solid #fff;
 }
 nav li p {
         font: .8em 'EB Garamond', serif;
@@ -338,10 +411,10 @@ header nav li:last-child a:hover {
         background-color: #fff;
         border-radius: 20px;
 }
-
 header [class*='col-'] {
         padding: 0;
 }
+
 @media screen and (min-width:768px) {
            
 }
@@ -363,114 +436,61 @@ header [class*='col-'] {
         
         }
 }
-/* ----- Home/Index ----- */
+/* ----- #snowy-mountain ----- */
 
-#Home-bg-hero h1 {
+#snowy-mountain-bg h1 {
         padding: 0;
         margin: 0;
-        text-align: center;
+       
 }
-#Home-bg-hero p > a {
+#snowy-mountain-bg p > a {
         background-color: #4B9475;
         border-radius: 20px;  
 }
-#Home-bg-hero p:last-child {
-        text-transform: uppercase;
+#snowy-mountain-bg p:last-child {
         padding-bottom: 5em;
 }
-#Home-bg-hero p:last-child a {
-        font-weight: 600;
-}
-#Home-bg-hero p:first-child {
+
+#snowy-mountain-bg p:first-child {
         color: #fff;
         font: 2em 'Montserrat', sans-serif;
-        font-weight: 600;      
-        text-transform: uppercase;
+        margin-bottom: 0px;      
 }
-#Home-bg-hero p:first-child span {
+#snowy-mountain-bg p:first-child span {
         text-transform: lowercase;
         font: .8em 'EB Garamond', serif;
         font-style: italic;
 }
-.col-2 {
-        margin: 2em 0em;
-}
-.info-p {
-        font-size: .8em;
-        line-height: 1.5em;
-}
 
-.intro-p p {
-        line-height: 1.5em;
-        font-size: 1.5em;
-}
-.intro-p ~ div > p{
-        line-height: 1.5em;
-}
 .intro-p ~ div {
         margin: 0 auto;
 }
-#about-image {
-        background: url(../img/about-hero.jpg) no-repeat center;
 
 
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        padding: 7em;
-}
 
-#take-action {
-        background: url(../img/take-action-hero.jpg) no-repeat center;
-
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        padding: 7em;
-
-}
 @media screen and (min-width:768px) {
-        #Home-bg-hero p:first-child {
-                font-size: 3em;
+        #snowy-mountain-bg p:first-child {
+                font-size: 3rem;
         }
-        #Home-bg-hero h1 {
+        #snowy-mountain-bg h1 {
                 text-align: left;
         }
 
 }
 @media screen and (min-width:1024px) {
-        #Home-bg-hero p:first-child span {
+        #snowy-mountain-bg p:first-child span {
                 text-transform: lowercase;
         }
-        .intro-p {
-                font-size: 1.5em;
-                line-height: 1.5em;
-        }
+      
         .intro-p ~ div > p{
                 margin-bottom: 5em;
         }
         header > .wrapper:first-child {
                 padding-top: 1em;
         }
-        .intro-p p {
-               
-                font-size: 1em;
-        }
+       
 }
-/* ----- take-action-bg-hero ----- */
-
-
-.col-3 {
-        line-height: 1.2em;
-
-}
-.col-3 p:last-child {
-        margin-top: 2em;
-}
+/* ----- forest-bg ----- */
 
 
 @media screen and (min-width:768px) {
@@ -484,33 +504,12 @@ header [class*='col-'] {
 }
 
 
-/* ----- What We Do ----- */
-#achievements,
-#mission {
-        text-align: left;
-        margin-top: 3em;
-}
-
-#about-hero ~ main nav p, #what-we-do + main nav li {
-        margin: 0;
-}
-
-main nav {
-        position: sticky;
-        top: 0;
-        left: 0;
-        background-color: #fff;
-        z-index: 2;
-        align-self: flex-start;
-}
-main nav li:first-child {
-        display: block;
-}
+/* ----- Blockquote ----- */
 
 blockquote::before {
         content: '\"';
         text-align: center;
-        font-size: 7em;
+        font-size: 7rem;
         position: absolute;
         top: 0.4em;
         left: 45%;
@@ -518,7 +517,7 @@ blockquote::before {
 }
 blockquote {
         padding-top: 3em;
-        line-height: 1.8em;
+        line-height: 1.2em;
         border-top: solid 1px #BCBCBC;
         border-bottom: solid 1px #BCBCBC;
         margin: 3em 0em 3em 0em;
@@ -530,14 +529,13 @@ blockquote {
 blockquote footer p {
         color: #BCBCBC;
         font: .8em 'Montserrat', sans-serif;
-        font-weight: 600;
 }
 
 @media screen and (min-width:768px) {
 
 }
 @media screen and (min-width:1024px) {
-        #about-hero + main{
+        .mountain-bg + main{
                 text-align: left;
         }
         main nav li{
@@ -570,7 +568,7 @@ blockquote footer p {
 }
 footer address li {
         display: block;
-        font-size: .9em;
+        font-size: .9rem;
 }
 footer > div:first-child {
         background-color: #4B9475;
@@ -587,6 +585,9 @@ footer {
 blockquote footer {
         margin-top: 2em;
 }
+[class*="fa"] {
+        font-size: 25px;
+} 
 @media screen and (min-width:768px) {
 
 }
@@ -596,43 +597,7 @@ blockquote footer {
         }
         
 }
-/* ----- hero ----- */
-#about-hero {
-        background: url(../img/about-hero.jpg) no-repeat center;
-        
-        
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-}
-#Home-bg-hero {
-        background: url(../img/home-hero.jpg) no-repeat center;
-        
-        
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-}
-#take-action-bg-hero {
-        background: url(../img/take-action-hero.jpg) no-repeat center;
 
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-}
-
-@media screen and (min-width:768px) {
-
-}
-@media screen and (min-width:1024px) {
- 
-}
     
 /*--------------------------------------------------------------
     7.0 - UTILITY
@@ -641,6 +606,27 @@ blockquote footer {
 .col-center {
         justify-content: center;
 }
+.intro-p {
+        font-size: 1.5rem;
+        /* line-height: 1.5em; */
+}
+.vertical-space-small {
+        margin: 2em 0em;
+}
+.btn {
+        background-color: #4B9475;
+        border-radius: 20px;
+        color: #fff;
+        text-transform: uppercase;
+}
+@media screen and (min-width:768px) {
 
+}
+@media screen and (min-width:1024px) {
+        .intro-p {
+                font-size: 1.3rem;
+                /* line-height: 1.5em; */
+        }
+}
 
  
