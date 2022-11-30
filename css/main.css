@@ -53,9 +53,6 @@ html {
         font: 1.5rem/1.5em 'EB Garamond', serif;
         text-align: center;
 }
-@media screen and (min-width:768px){
-      
-}
 @media screen and (min-width:1024px){
         html {
                 font: 1.5rem/1.5em 'EB Garamond', serif;
@@ -71,10 +68,6 @@ h2,
 li a {
         text-transform: uppercase;
 }
-
-
-
-
 
 
 /* ----- TYPOGRAPHY ----- */ 
@@ -102,14 +95,10 @@ li {
        
 }
 
-
 main p {
      font-size: .9rem;   
 }
 
-@media screen and (min-width:768px){
-       
-}
 @media screen and (min-width:1024px){
         main p,
         main ul {
@@ -319,13 +308,6 @@ footer a {
         font-weight: 600;
 }
 
-
-@media screen and (min-width:768px) {
-     
-}
-@media screen and (min-width:1024px) {
-     
-}
 /* ----- hero ----- */
 .mountain-bg {
         background: url(../img/about-hero.jpg) no-repeat center;
@@ -365,13 +347,11 @@ header img {
         margin-top: 2em;
 }
 @media screen and (min-width:768px) {
-header img {
-        margin-top: 0px;
+        header img {
+                margin-top: 0px;
+        }
 }
-}
-@media screen and (min-width:1024px) {
- 
-}
+
 
 
 /* ----- NAV ----- */
@@ -413,10 +393,6 @@ header nav li:last-child a:hover {
 }
 header [class*='col-'] {
         padding: 0;
-}
-
-@media screen and (min-width:768px) {
-           
 }
 @media screen and (min-width:1024px) {
         header nav {
@@ -471,6 +447,7 @@ header [class*='col-'] {
 @media screen and (min-width:768px) {
         #snowy-mountain-bg p:first-child {
                 font-size: 3rem;
+                font-weight: 700;
         }
         #snowy-mountain-bg h1 {
                 text-align: left;
@@ -493,10 +470,6 @@ header [class*='col-'] {
 /* ----- forest-bg ----- */
 
 
-@media screen and (min-width:768px) {
-      
-
-}
 @media screen and (min-width:1024px) {
         .wrapper > .col-center {
                 margin: 3em 0em 3em 0em;
@@ -531,9 +504,7 @@ blockquote footer p {
         font: .8em 'Montserrat', sans-serif;
 }
 
-@media screen and (min-width:768px) {
 
-}
 @media screen and (min-width:1024px) {
         .mountain-bg + main{
                 text-align: left;
@@ -588,9 +559,6 @@ blockquote footer {
 [class*="fa"] {
         font-size: 25px;
 } 
-@media screen and (min-width:768px) {
-
-}
 @media screen and (min-width:1024px) {
         footer address li {
                 display: inline-block;
@@ -608,7 +576,7 @@ blockquote footer {
 }
 .intro-p {
         font-size: 1.5rem;
-        /* line-height: 1.5em; */
+       
 }
 .vertical-space-small {
         margin: 2em 0em;
@@ -619,13 +587,11 @@ blockquote footer {
         color: #fff;
         text-transform: uppercase;
 }
-@media screen and (min-width:768px) {
 
-}
 @media screen and (min-width:1024px) {
         .intro-p {
                 font-size: 1.3rem;
-                /* line-height: 1.5em; */
+                
         }
 }
 
